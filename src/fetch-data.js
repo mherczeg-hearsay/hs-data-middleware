@@ -8,7 +8,7 @@ const fetchData = (req, next,  siteParams) => {
     fetch(url)
         .then((response) => {
             response.json().then(({data}) => {
-                console.log(`data received for org:${orgId} slug:${slug}`, data);
+                console.log(`data received for org:${orgId} slug:${slug}`);
                 req.renderData = data;
                 return next();
             });
